@@ -3,8 +3,10 @@ from PIL import Image
 
 q_level = 10
 q_step = 255 / q_level
-q_colors = [(0, 0, 0), (127, 0, 0), (255, 0, 0), (0, 127, 0), (0, 255, 0),
-            (0, 0, 127), (0, 0, 255), (127, 0, 127), (127, 127, 0), (0, 127, 127)]
+q_colors = [(0, 0, 0), (127, 0, 0), (255, 0, 0), (0, 127, 0),
+            (0, 255, 0), (0, 0, 127), (0, 0, 255),
+            (127, 0, 127), (127, 127, 0), (0, 127, 127)]
+
 
 def level(red, green, blue):
     intensity = (red + green + blue) / 3
@@ -14,6 +16,7 @@ def level(red, green, blue):
             return lev
 
     return 0
+
 
 for k in range(10):
     print('Iteration %s' % k)
